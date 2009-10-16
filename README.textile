@@ -1,6 +1,6 @@
 h1. Milestones for MHSVLC 0.1
 
-By Rohit Yadav, Pankaj Yadav et al
+By Pankaj and Rohit Yadav et al
 
 h2. GUI
 
@@ -21,7 +21,7 @@ h2. Playlist
 
 h2. File Access
 
-* From a fixed dir...
+* From a fixed dir, E:
 
 h2. Intended Codes/formats
 
