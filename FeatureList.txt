@@ -1,0 +1,55 @@
+Minimal COntrols
+================
+
+Mandatory
+---------
+
+1. Play/Pause
+2. Forward
+3. backward
+4. Playback Slider with time elapsed and total time
+5. Volume Control Slider
+6. Fullscreen button
+
+Optional
+--------
+
+1. Repeat 
+2. Shuffle
+
+Other UI/Features
+=================
+
+1. Show Meta: Name/Title, Author, Album, Artwork
+2. Equaliser: Custom presets
+3. Fav: Get from Ratings
+4. Show Media Info
+5. Open Button
+6. Visualiser
+7. Subtitles
+8. Tempo
+9. Radio
+10. Lyrics
+11. Last.fm
+12. Youtube
+13. Sleep Timer
+14. UI Splash at start
+15. Themeable GUI
+
+Views
+=====
+
+1. Album art Carousel
+2. Grid
+3. List
+4. Complex list
+
+File Features
+=============
+
+1. Playlist: Now Playing, Make your own, Audio, Video, Pictures, All files.
+2. Rating
+3. Search
+4. Library
+5. Settings
+6. File Browser
