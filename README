@@ -1,0 +1,60 @@
+Milestones for MHSVLC 0.1
+=========================
+
+GUI
+===
+
+1. Play/Pause
+2. Forward
+3. backward
+4. Playback Slider with time elapsed and total time
+5. Volume Control Slider
+6. Fullscreen
+7. Show Meta: Name/Title, Author, Album, Artwork
+8. UI Splash at start
+
+Playlist
+========
+
+1. List
+2. Now Playing Only
+3. Minimal Library feature
+
+File Access
+===========
+
+1. From a fixed dir...
+
+Intended Codes/formats
+======================
+
+1. Audio: mp3, wav, midi, ogg/flac
+2. Video: avi, mp4
+3. Image: PNG, JPG, GIF
+
+
+Current Status/Progress
+=======================
+
+1. Unstable Port VLC 0.9.9a
+2. Libmad ported, plays low bit mp3 out of the box
+3. Jerky sound output, working on a better Producer Consumer implementation b/w:
+   | Audio File -> Decoder -> Output Buffer | => Hardware
+4. GUI development started
+
+Future Possibility (Working on it) 
+==================
+
+1. Python on S60 may be
+2. No Qt (enough overhead)
+3. Gstreamer ma replace the whole libVLC stuff
+
+
+Credits
+=======
+
+1. Pankaj Yadav
+2. Rohit Yadav
+3. Other guys mail me: rohityadav89@gmail.com, I will add you all :-) 
+
+*File last update by Rohit Yadav*

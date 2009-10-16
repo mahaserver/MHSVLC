@@ -9,6 +9,7 @@ Mandatory
 3. backward
 4. Playback Slider with time elapsed and total time
 5. Volume Control Slider
+6. Fullscreen button
 
 Optional
 --------
