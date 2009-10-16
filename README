@@ -1,60 +1,55 @@
-Milestones for MHSVLC 0.1
-=========================
+h1. Milestones for MHSVLC 0.1
 
-GUI
-===
+By Rohit Yadav, Pankaj Yadav et al
 
-1. Play/Pause
-2. Forward
-3. backward
-4. Playback Slider with time elapsed and total time
-5. Volume Control Slider
-6. Fullscreen
-7. Show Meta: Name/Title, Author, Album, Artwork
-8. UI Splash at start
+h2. GUI
 
-Playlist
-========
+* Play/Pause
+* Forward
+* Backward
+* Playback Slider with time elapsed and total time
+* Volume Control Slider
+* Fullscreen
+* Show Meta: Name/Title, Author, Album, Artwork
+* UI Splash at start
 
-1. List
-2. Now Playing Only
-3. Minimal Library feature
+h2. Playlist
 
-File Access
-===========
+* List
+* Now Playing Only
+* Minimal Library feature
 
-1. From a fixed dir...
+h2. File Access
 
-Intended Codes/formats
-======================
+* From a fixed dir...
 
-1. Audio: mp3, wav, midi, ogg/flac
-2. Video: avi, mp4
-3. Image: PNG, JPG, GIF
+h2. Intended Codes/formats
+
+* Audio: mp3, wav, midi, ogg/flac
+* Video: avi, mp4
+* Image: PNG, JPG, GIF
 
 
-Current Status/Progress
-=======================
+h2. Current Status/Progress
 
-1. Unstable Port VLC 0.9.9a
-2. Libmad ported, plays low bit mp3 out of the box
-3. Jerky sound output, working on a better Producer Consumer implementation b/w:
+* Unstable Port VLC 0.9.9a
+* Libmad ported, plays low bit mp3 out of the box
+* Jerky sound output, working on a better Producer Consumer implementation b/w:
    | Audio File -> Decoder -> Output Buffer | => Hardware
-4. GUI development started
+* GUI development started
 
-Future Possibility (Working on it) 
-==================
+h3. Future Possibility (Working on it) 
 
-1. Python on S60 may be
-2. No Qt (enough overhead)
-3. Gstreamer ma replace the whole libVLC stuff
+* Python on S60 may be
+* We decided: No Qt (enough overhead), but we may change our mind :-)
+* Gstreamer ma replace the whole libVLC stuff
 
+h2. Links
+mahaserver.com
 
-Credits
-=======
+h3. License
 
-1. Pankaj Yadav
-2. Rohit Yadav
-3. Other guys mail me: rohityadav89@gmail.com, I will add you all :-) 
+* Nothing decided yet, sticking to GNU GPL v2 or later.
+* Will update that later, not good at law but coding LOL
 
 *File last update by Rohit Yadav*
