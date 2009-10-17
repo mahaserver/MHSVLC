@@ -1,0 +1,124 @@
+/////////Define GUI/ENGINE Macro According to your Mood.[:)]
+
+MACRO GUI                  ////GUI Prefered if Both Macros Defined
+
+//////These Enable  some Ugly Hacks inside code which were used to Port VLC to Symbian.
+
+MACRO MHSUGLY MHSFREE
+
+MACRO HAVE_AV_CONFIG_H NDEBUG HAVE_CONFIG_H MHSVLC __LIBVLC__
+
+
+
+
+TARGET             MHSVLC.exe
+TARGETTYPE         exe
+UID                0x100039CE 0x200272B7
+VENDORID           0
+
+START RESOURCE     ..\data\MHSVLC.rss
+HEADER
+TARGETPATH         \\resource\\apps
+LANG               SC
+END //RESOURCE
+
+SOURCEPATH         ..\data
+START RESOURCE     MHSVLC_reg.rss
+#ifdef WINSCW
+TARGETPATH         \private\10003a3f\apps
+#else
+TARGETPATH         \private\10003a3f\import\apps
+#endif
+END //RESOURCE
+
+
+USERINCLUDE       ..\inc
+
+SYSTEMINCLUDE     \epoc32\include
+
+// Open C headers
+SYSTEMINCLUDE     \epoc32\include\stdapis 
+
+// Using main() as entry point
+STATICLIBRARY     libcrt0.lib
+
+LIBRARY           libc.lib       // for stdlib
+LIBRARY           euser.lib 
+LIBRARY           libgles_cm.lib // for opengl es
+LIBRARY           cone.lib
+LIBRARY           ws32.lib
+
+LIBRARY         libpthread.lib
+LIBRARY         libm.lib
+LIBRARY         libdl.lib
+LIBRARY         libz.lib
+LIBRARY         eikcore.lib fbscli.lib ImageConversion.lib efsrv.lib apparc.lib
+LIBRARY mediaclientaudiostream.lib
+
+EPOCHEAPSIZE 0x5000 0x2000000
+
+
+CAPABILITY LocalServices NetworkServices ReadUserData UserEnvironment WriteUserData MultimediaDD
+
+
+
+SOURCEPATH ..\src\config
+SOURCE chain.c cmdline.c config_core.c config_intf.c dirs.c file.c
+SOURCEPATH ..\src\control
+SOURCE audio.c control_core.c control_vlm.c event.c flat_media_list_view.c
+SOURCEPATH ..\src
+SOURCE libvlc-module.c libvlc.c version.c vlc.c
+SOURCEPATH ..\src\control
+SOURCE hierarchical_media_list_view.c hierarchical_node_media_list_view.c log.c media.c media_discoverer.c media_library.c media_list.c media_list_player.c media_list_view.c media_player.c mediacontrol_audio_video.c mediacontrol_core.c mediacontrol_util.c playlist.c video.c
+SOURCEPATH ..\src\misc
+SOURCE action.c block.c cpu.c devices.c error.c es_format.c events.c filter_chain.c image.c md5.c messages.c mtime.c not_specific.c objects.c rand.c stats.c threads.c update.c variables.c xml.c
+SOURCEPATH ..\src\extras
+SOURCE getopt.c getopt1.c libc.c
+SOURCEPATH ..\src\modules
+SOURCE cache.c entry.c modules.c os.c
+SOURCEPATH ..\src\mhsmodules\access
+SOURCE access_file.c
+SOURCEPATH ..\src\mhsmodules\audio_filter\channel_mixer
+SOURCE dolby.c headphone.c mono.c simple.c trivial_channel_mixer.c
+SOURCEPATH ..\src\mhsmodules\audio_filter\converter
+SOURCE fixed.c float.c mpgatofixed32.c
+SOURCEPATH ..\src\mhsmodules\audio_filter\resampler
+SOURCE bandlimited.c linear.c trivial_resampler.c ugly.c
+SOURCEPATH ..\src\mhsmodules\audio_mixer
+SOURCE float32.c spdif.c trivial.c
+SOURCEPATH ..\src\mhsmodules\audio_out
+SOURCE audio_sdl.cpp
+SOURCEPATH ..\src\mhsmodules\codec
+SOURCE mpeg_audio.c
+SOURCEPATH ..\src\mhsmodules\control
+SOURCE rc.c
+SOURCEPATH ..\src\mhsmodules\demux\mpeg
+SOURCE mpga.c
+SOURCEPATH ..\src\mhsmodules\meta_engine
+SOURCE id3tag.c
+SOURCEPATH ..\src\text
+SOURCE charset.c iso_lang.c strings.c unicode.c wincp.c
+SOURCEPATH ..\src\input
+SOURCE access.c clock.c control.c decoder.c decoder_synchro.c demux.c es_out.c input.c item.c mem_stream.c meta.c stream.c subtitles.c var.c vlm.c vlmshell.c
+SOURCEPATH ..\src\audio_output
+SOURCE aout_input.c aout_intf.c common.c dec.c filters.c mixer.c output.c
+SOURCEPATH ..\src\playlist
+SOURCE engine.c loadsave.c playlist_control.c playlist_item.c search.c services_discovery.c sort.c thread.c tree.c
+SOURCEPATH ..\src\libmad
+SOURCE libmad_bit.c libmad_decoder.c libmad_fixed.c libmad_frame.c libmad_huffman.c libmad_layer12.c libmad_layer3.c libmad_minimad.c libmad_stream.c libmad_synth.c libmad_timer.c libmad_version.c
+SOURCEPATH ..\src\libid3tag
+SOURCE compat.c crc.c debug.c field.c frame.c frametype.c genre.c latin1.c libid3tag_file.c libid3tag_version.c parse.c render.c tag.c ucs4.c utf16.c utf8.c util.c
+SOURCEPATH ..\src\osd
+SOURCE osd.c osd_text.c osd_widgets.c
+SOURCEPATH ..\src\stream_output
+SOURCE announce.c sap.c sdp.c stream_output.c
+SOURCEPATH ..\src\video_output
+SOURCE video_output.c video_text.c video_widgets.c vout_intf.c vout_pictures.c vout_subpictures.c
+SOURCEPATH ..\src\network
+SOURCE acl.c getaddrinfo.c httpd.c io.c poll.c rootbind.c tcp.c tls.c udp.c
+SOURCEPATH ..\src\interface
+SOURCE interaction.c interface.c intf_eject.c
+SOURCEPATH ..\src\mhsmodules\gui
+SOURCE game.cpp gamecontroller.cpp mhsopengl.cpp
+SOURCEPATH ..\src\mhsmodules\eglutils
+SOURCE Glutils.cpp Mathutils.cpp Textureutils.cpp Utils3d.cpp

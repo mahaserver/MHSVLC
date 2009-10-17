@@ -1,0 +1,31 @@
+/*
+* ==============================================================================
+*  Name        : MHSVLC_reg.rss
+*  Part of     : MHSVLC
+*  Interface   : 
+*  Description : 
+*  Version     : 
+*
+*  Copyright (c) 2007 Nokia Corporation.
+*  This material, including documentation and any related 
+*  computer programs, is protected by copyright controlled by 
+*  Nokia Corporation.
+* ==============================================================================
+*/
+#include <appinfo.rh>
+#include <MHSVLC.rsg>
+
+UID2 KUidAppRegistrationResourceFile
+UID3 0x200272B7
+
+RESOURCE APP_REGISTRATION_INFO
+  {
+  app_file="MHSVLC";
+
+  localisable_resource_file = "\\resource\\apps\\MHSVLC";
+  localisable_resource_id   = R_MHSVLC_LOCALISABLE_APP_INFO;
+
+  embeddability=KAppNotEmbeddable;
+  newfile=KAppDoesNotSupportNewFile;
+  }
+

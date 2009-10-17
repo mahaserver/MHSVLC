@@ -1,0 +1,32 @@
+/*
+* ==============================================================================
+*  Name        : bld.inf
+*  Part of     : MHSVLC
+*  Interface   : 
+*  Description : 
+*  Version     : 
+ *  Copyright © 2008 Nokia Corporation.
+ *  This material, including documentation and any related 
+ *  computer programs, is protected by copyright controlled by 
+ *  Nokia Corporation. All rights are reserved. Copying, 
+ *  including reproducing, storing, adapting or translating, any 
+ *  or all of this material requires the prior written consent of 
+ *  Nokia Corporation. This material also contains confidential 
+ *  information which may not be disclosed to others without the 
+ *  prior written consent of Nokia Corporation.
+* ==============================================================================
+*/
+
+PRJ_PLATFORMS
+default gcce
+
+PRJ_EXPORTS
+
+..\data\icubetexor.jpg ..\winscw\c\private\200272B7\icubetexor.jpg
+..\data\mono.mp3 ..\winscw\c\private\200272B7\mono.mp3
+
+PRJ_MMPFILES
+gnumakefile icons_scalable_dc.mk
+MHSVLC_default.mmp
+
+//  End of File 
